@@ -10,6 +10,8 @@ on error error_message number error_number
 			tell application "System Events"
 				select (first row of table 1 of scroll area 1 of tab group 1 of window "Security & Privacy" of application process "System Preferences" whose value of item 1 of static text 1 of UI element 1 contains "Mic")
 				delay 0.1
+				--anywhere it says of row 2 is the scripting assuming its the second app in the list
+				--TODO: determine the row dynamically
 				set micStatus to value of checkbox 1 of UI element "zoom.us" of row 2 of table 1 of scroll area 1 of group 1 of tab group 1 of window "Security & Privacy" of application process "System Preferences" of application "System Events" as boolean
 				if micStatus is true then
 					
