@@ -30,13 +30,10 @@ on toggleClick(onOroff, appName)
 					else
 						click checkbox 1 of UI element appName of row i of table 1 of scroll area 1 of group 1 of tab group 1 of window SWindow
 					end if
-					--on error e
-					--if e does not contain appName then log value
+
 				end try
 				
 			end repeat
-			--delay 1 -- time to display the correct pane with the users for sharing
-			--click radio button 1 of radio group 1 of group 1 of window SWindow -- click the button "all users"  
 		end tell
 	end tell
 end toggleClick
